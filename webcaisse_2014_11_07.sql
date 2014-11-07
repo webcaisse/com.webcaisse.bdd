@@ -71,6 +71,26 @@ CREATE TABLE IF NOT EXISTS `cdes_lines` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `societe`
+--
+
+CREATE TABLE IF NOT EXISTS `societe` (
+`id_societe` int(11) NOT NULL,
+  `nom` char(50) NOT NULL,
+  `adresse` char(100) DEFAULT NULL,
+  `telephone` char(12) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `societe`
+--
+
+INSERT INTO `societe` (`id_societe`, `nom`, `adresse`, `telephone`) VALUES
+(1, 'pizza la routande', '3 rue de la villette', '0636287889');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `clients`
 --
 
@@ -455,26 +475,6 @@ CREATE TABLE IF NOT EXISTS `session` (
 `id_session` int(11) NOT NULL,
   `id_societe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `societe`
---
-
-CREATE TABLE IF NOT EXISTS `societe` (
-`id_societe` int(11) NOT NULL,
-  `nom` char(50) NOT NULL,
-  `adresse` char(100) DEFAULT NULL,
-  `telephone` char(12) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Contenu de la table `societe`
---
-
-INSERT INTO `societe` (`id_societe`, `nom`, `adresse`, `telephone`) VALUES
-(1, 'pizza la routande', '3 rue de la villette', '0636287889');
 
 -- --------------------------------------------------------
 
